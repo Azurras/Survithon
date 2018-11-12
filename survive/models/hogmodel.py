@@ -1,5 +1,5 @@
-from survive.enemies.enemymodel import Enemy
-from survive.attributes.attributemodel import Attribute
+from survive.models.enemymodel import Enemy
+from survive.models.attributemodel import Attribute
 
 
 class Hog(Enemy):

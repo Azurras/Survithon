@@ -1,9 +1,9 @@
-from survive.player.playermodel import Player
-from survive.activities.crafting.craftingcontroller import CraftingController
-from survive.inventory.inventorycontroller import InventoryController
-from survive.activities.hunting.huntingcontroller import HuntingController
-from survive.generic.controller import Controller
-from survive.generic.view import View
+from survive.models.player import Player
+from survive.craftingcontroller import CraftingController
+from survive.inventorycontroller import InventoryController
+from survive.huntingcontroller import HuntingController
+from survive.controller import Controller
+from survive.view import View
 
 
 class GameController(Controller):

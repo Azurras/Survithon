@@ -1,5 +1,5 @@
-from survive.inventory.inventorymodel import Inventory
-from survive.attributes.attributemodel import Attribute
+from survive.models.inventorymodel import Inventory
+from survive.models.attributemodel import Attribute
 
 import sys
 

@@ -1,22 +1,22 @@
-from survive.generic.controller import Controller
-from survive.activities.hunting.huntingmodel import Hunting
-from survive.activities.combat.combatcontroller import CombatController
-from survive.generic.view import View
+from survive.controller import Controller
+from survive.view import View
+from survive.models.woodworkingmodel import WoodWorking
 
 
-class HuntingController(Controller):
+class WoodWorkingController(Controller):
     def __init__(self):
         self._view = {
             0: "Possible Actions:\n",
-            1: "(1)  Hunt",
-            2: "(10) Clear Screen",
-            3: "(0)  Back To Game\n"
+            1: "(1)  Cut Wood",
+            2: "(2)  Build A Shelter",
+            3: "(3)  Build A Boat",
+            4: "(10) Clear Screen",
+            5: "(0)  Back To Crafting\n"
         }
 
     def start(self, player):
         view = View(self._view)
-        hunting = Hunting()
-        combat_controller = CombatController()
+        woodworker = WoodWorking()
         playerInput = -1
 
         while True:
@@ -33,10 +33,13 @@ class HuntingController(Controller):
                     super().clear_screen()
 
                 elif(playerInput == 1):
-                    if(hunting.chance_to_find_animal()):
-                        combat_controller.start(player)
-                    else:
-                        print("No Animal Found!")
+                    player = woodworker.cut_wood(player)
+
+                elif(playerInput == 2):
+                    player = woodworker.build_shelter(player)
+
+                elif(playerInput == 3):
+                    player = woodworker.build_boat(player)
 
                 else:
                     print("This is not a valid action\n")

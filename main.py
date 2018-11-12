@@ -1,4 +1,4 @@
-from survive.game.gamecontroller import GameController
+from survive.gamecontroller import GameController
 
 
 def main():

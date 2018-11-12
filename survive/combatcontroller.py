@@ -1,6 +1,6 @@
-from survive.generic.controller import Controller
-from survive.generic.view import View
-from survive.enemies.enemycontroller import EnemyController
+from survive.controller import Controller
+from survive.view import View
+from survive.enemycontroller import EnemyController
 
 
 class CombatController(Controller):

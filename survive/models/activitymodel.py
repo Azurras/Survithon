@@ -1,4 +1,4 @@
-from survive.generic.model import Model
+from survive.model import Model
 
 
 class Activity(Model):

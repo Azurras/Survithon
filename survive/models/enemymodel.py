@@ -1,10 +1,10 @@
-from survive.generic.model import Model
-from survive.attributes.attributemodel import Attribute
+from survive.models.model import Model
+from survive.models.attributemodel import Attribute
 
 # TODO: Raise error when values are set below zero
 
 
-class Enemy(Model):
+class Enemy(object):
     def __init__(self):
         self.DEFAULT_HEALTH = 10
         self.DEFAULT_NAME = "Enemy"
